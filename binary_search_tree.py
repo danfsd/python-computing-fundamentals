@@ -50,6 +50,14 @@ class BSTNode():
         if self.right:
             self.right.preorder()
 
+    def postorder(self):
+        if self.left:
+            self.left.postorder()
+        if self.right:
+            self.right.postorder()
+
+        print("% 2d" % self.value, end='')
+
 
 class BST():
 
@@ -82,4 +90,6 @@ class BST():
         self.root.preorder()
 
     def postorder(self):
-        pass
+        if self.root is None:
+            return
+        self.root.postorder()
