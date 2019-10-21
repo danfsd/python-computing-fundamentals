@@ -70,7 +70,7 @@ class LinkedList:
 
     def nthNode(self, position):
         if position >= self.getLength() or position < 0:
-            print("The position % 2d is out of bounds")
+            print("The position % 2d is out of bounds" % position)
             return None
 
         count = 0
